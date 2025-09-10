@@ -1,0 +1,145 @@
+/*Refernces - (W3Schools, 2025)*/
+nav {
+	background-color: #1a1a1a !important;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	/* Center all items except for GCL and search */
+	align-items: center;
+	margin: 0;
+	width: 100%;
+	top: auto !important;
+	/* Force top to be auto */
+	bottom: auto !important;
+	/* Ensure bottom is also auto if it's getting overridden */
+	left: 0 !important;
+
+}
+
+nav ul li {
+	position: relative;
+}
+
+/* General Navbar Links */
+nav ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	/* White text for navbar items */
+	padding: 12px 15px;
+	/* Added padding for larger clickable area */
+	display: block;
+	font-weight: 500;
+	/* Slightly bold text for navbar items */
+	transition: background-color 0.3s ease;
+	/* Smooth transition on hover */
+}
+
+/* Lighter grey background on hover */
+nav ul li a:hover {
+	background-color: #d3d3d3;
+	/* Lighter grey background on hover */
+}
+
+/* Custom Dropdown Menu Style */
+ul.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	min-width: 160px;
+	top: auto !important;
+	/* This ensures it doesn't use the default 'top' value */
+	bottom: auto !important;
+	/* You can also set 'bottom' to 'auto' if necessary */
+	left: 0;
+}
+
+
+ul.dropdown-menu li {
+	display: block;
+}
+
+ul.dropdown-menu li a {
+	color: #333;
+	/* Dark text for dropdown links */
+	padding: 10px 15px;
+	/* Padding to make dropdown items bigger */
+	text-decoration: none;
+	font-weight: 400;
+	/* Regular weight for dropdown items */
+	transition: background-color 0.3s ease;
+	/* Smooth transition for hover */
+}
+
+/* Lighter grey background on hover for dropdown items */
+ul.dropdown-menu li a:hover {
+	background-color: #e0e0e0;
+	/* Lighter grey background on hover for dropdown items */
+}
+
+/* Show dropdown on hover (for desktop) */
+nav ul li:hover .dropdown-menu {
+	display: block;
+	/* Show the dropdown menu when hovering over the list item */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+	nav ul {
+		flex-direction: column;
+		align-items: stretch;
+		/* Stack navbar items on small screens */
+		margin-top: 0;
+	}
+
+	nav ul li {
+		width: 100%;
+		text-align: left;
+		padding-left: 2em;
+	}
+
+	/* Hide dropdown by default */
+	ul.dropdown-menu {
+		display: none;
+		position: static;
+		width: 100%;
+		box-shadow: none;
+	}
+
+	/* Mobile click behavior for dropdown */
+	nav ul li.active .dropdown-menu {
+		display: block;
+	}
+}
+
+/* Optional: Add a smooth transition effect for dropdown */
+ul.dropdown-menu {
+	transition: max-height 0.3s ease-out;
+	max-height: 0;
+	/* Set initial state to zero height */
+	overflow: hidden;
+}
+
+nav ul li.active .dropdown-menu {
+	max-height: 500px;
+	/* Expand the dropdown when active */
+}
+/* Shrink nav links slightly between 992px and 1200px */
+@media (max-width: 1250px) and (min-width: 992px) {
+  .navbar-nav .nav-link {
+    font-size: 0.85rem; /* smaller font */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem !important;
+    margin-right: 0.5rem;
+  }
+}

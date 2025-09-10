@@ -1,0 +1,94 @@
+.nav_white {
+  border-bottom: 3px solid #757575;
+  background-color: white !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  padding: 0.4375rem;
+  color: #212529;
+  text-align: center;
+}
+
+.nav_beige {
+  background-color: #E4DCC9 !important;
+  font-size: 1rem;
+  font-weight: 600;
+  border-top: 3px solid #757575;
+  border-bottom: 2px solid #757575;
+  padding: 0.5rem;
+  color: #212529;
+  text-align: center;
+}
+
+.brand-logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.brand-title {
+  font-weight: bold;
+  font-size: 1.4rem; /* base size */
+  color: #1C1C1C;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+}
+
+/* Wrapper for brand text to help center without breaking layout */
+.brand-text-wrapper {
+  display: flex;
+  align-items: center;
+}
+/* Darker color for nav links */
+.navbar .nav-link {
+  color: #504f4f !important;
+  font-weight: 500;
+}
+
+/* On hover */
+.navbar .nav-link:hover {
+  color: #000 !important;
+  text-decoration: underline;
+}
+
+
+/* Tablets and medium screens */
+@media (max-width: 992px) {
+  .brand-title {
+    font-size: 1.3rem;
+    white-space: normal;
+    margin: 0 auto;
+    text-align: center; /* Center text inside brand-title */
+    flex: 1; /* Allow brand-title to take full width */
+  }
+  .brand-text-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+  /* Keep navbar-brand horizontal to keep logo and text aligned */
+  .navbar-brand {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .brand-title {
+    font-size: 1.1rem;
+    white-space: normal;
+    margin: 0 auto;
+    text-align: center; /* Center text inside brand-title */
+    flex: 1; /* Allow brand-title to take full width */
+  }
+  .brand-text-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-brand {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left;
+  }
+}
