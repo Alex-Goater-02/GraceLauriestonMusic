@@ -255,12 +255,13 @@
 }
 @media (max-width: 480px) {
   .quick-facts li {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
   }
 
-  .feature-icon {
-    margin-bottom: 6px;
+  .quick-facts li img {
+    margin-right: 8px;
+    margin-bottom: 0;
   }
 }
